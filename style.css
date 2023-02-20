@@ -10,7 +10,7 @@ body {
   font-family: 'Poppins', sans-serif !important;
   width: 100% !important;
   height: 100vh !important;
-  background: url(/images-of-ab/bg\ of\ ab.jpg);
+  background: url(./images-of-ab/bg\ of\ ab.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
