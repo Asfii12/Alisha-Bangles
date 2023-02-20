@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <div class="container">
+    <header>
+
+      <div class="logo"><img src="/images-of-ab/ab-logo-removebg.png"></div>
+
+      <div class="menu">
+        <ul class="list" id="lst">
+
+          <li><a href="index.html" class="activeli">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="location.html">Location</a></li>
+          <li><a href="contact.html">Contact</a></li>
+
+        </ul>
+        <div id="m-btn" class=" #m-btn" onclick="toggle()">
+          <img src="https://img.icons8.com/ios-filled/35/40C057/menu-rounded.png" />
+        </div>
+      </div>
+
+
+    </header>
+  </div>
+  <div class="welcome">Welcome To Alisha Bangles</div>
+
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="/images-of-ab/trendy.jpg" style=" height:350px;
+      width: 100%;">
+      <div class="text">Designer</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="/images-of-ab/red-bangles.jpg" style="width:100%; height:350px">
+      <div class="text">Bride</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="/images-of-ab/𝐌𝐀𝐇𝐑𝐔𝐊𝐇.jpg" style="width:100%; height:350px">
+      <div class="text">Reception</div>
+    </div>
+
+    <a class="prev" onclick="plusSlides(-1)">❮</a>
+    <a class="next" onclick="plusSlides(1)">❯</a>
+
+  </div>
+  <br>
+
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+
+
+  <script>
+
+   
+let li = document.getElementById("lst");
+    let btn = document.getElementById("m-btn");
+
+    function toggle() {
+      lst.classList.toggle("togglelist");
+      m - btn.classList.toggle("rotate");
+
+    }
+
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) { slideIndex = 1 }
+      if (n < 1) { slideIndex = slides.length }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+  </script>
+</body>
+
+</html>

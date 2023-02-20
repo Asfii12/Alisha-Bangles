@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    <div class="all">
+        <header>
+
+            <div class="logo"><img src="/ab-logo-removebg.png"></div>
+      
+            <div class="menu">
+              <ul  class="list" id="lst">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="location.html" class="activeli">Location</a></li>
+                <li><a href="contact.html">Contact</a></li>
+      
+              </ul>
+              <div id="m-btn" class=" #m-btn" onclick="toggle()">
+                <img src="https://img.icons8.com/ios-filled/35/40C057/menu-rounded.png"/>
+              </div>
+            </div>
+          </header>
+          <div class="atal">
+            <img src="/images-of-ab/bg-rf.jpg" alt="">
+          </div>
+          <div class="map">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d42145.40019551878!2d72.5748046441849!3d23.032750691984926!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1675526194199!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+    </div>
+    <script>
+      let li = document.getElementById("lst");
+      let btn = document.getElementById("m-btn");
+  
+      function toggle(){
+        lst.classList.toggle("togglelist");
+        m-btn.classList.toggle("rotate");
+    
+      }
+    
+    </script>
+</body>
+</html>
